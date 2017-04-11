@@ -1,0 +1,66 @@
+<html>
+<head>
+<meta charset="UTF-8">
+<title>小考</title> 
+<style type="text/css"> 
+.red { color: red; } 
+.line { border: 0.5px solid #333; } 
+</style> 
+<script src="jquery-3.2.0.js"></script> 
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script> 
+<script language="JavaScript"> 
+
+	function function1(){
+		var objNode1= document.getElementById("w1");
+		var objNode2= document.getElementById("w2");
+		var objNode3= document.getElementById("w3");
+		var text1 = document.createTextNode("5");
+		var text2 = document.createTextNode("3");
+		var text3 = document.createTextNode("MySQL");
+		objNode1.appendChild(text1);
+		objNode2.appendChild(text2);
+		objNode3.appendChild(text3);
+	}
+
+	function function3(){
+		var objNode = document.getElementById("h");
+		var text1 = document.createTextNode("_4104029033");
+		objNode.appendChild(text1);
+	}
+	
+	$(document).ready(function() { 
+		$('#a').mouseenter(function() { 
+		$(this).addClass("red");
+		$(this).css('font-size','36px');
+		})
+		.mouseleave(function() { 
+		$(this).css('font-size','12px');
+		}); 
+	}); 
+
+	$('#line').ready(function() { 
+		$('#line').addClass("line");
+		})
+
+</script> 
+</head>
+
+<body>
+<h1 id=h> Web Programming</h1>
+<div id="line"></div><br>
+<div>Content</div>
+	<ul>
+		<li id=w1>HTML</li>
+		<li id=w2>CSS</li>
+		<li>DOM</li>
+		<li>JavaScript</li>
+		<li id=w3>JSP</li>
+	</ul>
+
+	<input type="button" value="以JS更改元素內容" onclick="function1()">
+	<input type="button" id="a" value="以jQuery更改CSS" onclick="function2()">
+	<input type="button" value="加上學號" onclick="function3()">
+	
+
+</body> 
+</html>
